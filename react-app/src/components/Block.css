@@ -1,0 +1,11 @@
+.block{
+    padding: 0 1.5rem 0 1.5rem;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aqua;
+    width: 90%;
+    height: 10rem;
+}

@@ -1,0 +1,15 @@
+.mfg-date{
+    color: white;
+    text-align: center;
+    background-color: black;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column-reverse;
+    width: 7rem;
+    height: 7rem;
+    padding: o.5rem;
+    border-radius: 1rem;
+}
+.year ,.month{
+    font-size: 1rem;
+}

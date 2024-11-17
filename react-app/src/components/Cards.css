@@ -1,0 +1,11 @@
+.cardcss{
+    height: 80vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    color: red;
+    background-color: yellow;
+}
