@@ -1,0 +1,73 @@
+Q. what is npm(node package manager)?
+ans. npm (Node Package Manager) is a package manager for JavaScript that helps developers install, share, and manage libraries or packages for Node.js projects. It has two main components:
+
+npm CLI (Command Line Interface): A tool used to install, update, or uninstall packages, manage project dependencies, and run scripts. For example, npm install installs packages.
+
+npm Registry: An online repository where JavaScript packages are published, and developers can download and share open-source libraries.
+
+In short, npm simplifies managing and sharing JavaScript code.
+
+Package.json->
+
+In React (and any Node.js project), package.json is a configuration file that contains essential information about the project, such as:
+
+1. Project details: Name, version, description.
+2. Dependencies: A list of libraries (like React) the project depends on.
+3. Scripts: Custom commands to run tasks (e.g., start, build, test).
+4. Metadata: Author, license, etc.
+
+what is the mean of private:true attribute?
+
+"private":true in the package.json of a project ensures that the project cannot be accidentally published to the npm registry, which is a public repository for sharing open-source packages. This is particularly important if your project contains sensitive or proprietary code, as it prevents you from unintentionally making it available to the public. 
+The "private": true attribute acts as a safeguard, ensuring that npm will block any attempts to publish the package.
+
+what is dependencies and how to add package in dependencies?
+
+dependencies:  contains all the required node modules and versions required for the application in production. In the snapshot above, it contains three dependencies, which allows us to use react , react-dom and react-scripts in our JavaScript. react-scripts provide a set of useful development scripts for working with React.
+In order to add a package under dependencies, while installing, use --save.
+For example, npm i <package-name>
+
+what is devDependencies and how to add package in this?
+
+devDependencies in a package.json file are the packages or libraries that are only needed during the development of a project, not in the production environment. These dependencies include tools like linters, testing frameworks, build tools, and transpilers.
+
+For example:
+Linters (e.g., ESLint) to check code quality.
+Testing libraries (e.g., Jest) to run unit tests.
+Build tools (e.g., Webpack, Babel) to bundle and transpile code
+
+npm i <package-name> -D
+
+Q. deff b/w dependencies and devDependencies?
+
+dependencies:
+
+These are essential packages required for your project to run in production.
+They include libraries or frameworks that your app relies on at runtime, such as React, Express, or Axios.
+Installed using: npm i <package-name>
+
+devDependencies:
+
+These are packages only needed during the development phase of your project.
+They include tools like linters (ESLint), testing frameworks (Jest), and build tools (Webpack, Babel).
+Installed using: npm i <package-name> -D
+
+the package is list in dependencies on the basis of versions
+ex->     "tailwindcss": "^3.4.11" 
+here "^" this sign show that when the new update is coming in the package then the it is automatically update
+
+
+Q. how to uninstall packages from dependencies?
+ans. npm uninstall <packageName>
+
+Q. what is node_modules and why it is not upload in gitHub?
+ans. 
+In JavaScript, specifically in Node.js, the node_modules directory is where all your project's dependencies (external libraries and modules) are stored. These dependencies are defined in the package.json file, which lists the modules required for your project, along with their version numbers.
+
+When you install a package using a package manager like npm (Node Package Manager) or yarn, those packages, along with their own dependencies, are downloaded and placed inside the node_modules folder.
+
+The node_modules folder is typically not uploaded to GitHub or other version control systems because it can be easily recreated using the package.json file. Here's why:
+1. Redundancy
+2. Size
+3. Cross-Platform/Environment Compatibility
+4. Version Control Best Practices
